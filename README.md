@@ -2,12 +2,14 @@
 
 Tiny utility for [instance mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode) of [p5.js](https://p5js.org/).
 
+ES6/[TypeScript](https://www.typescriptlang.org/) friendly.
+
 
 ## How to load
 
 ### With \<script\> tag
 
-Something like this in `<head>` tag:
+Something like this in the `<head>` tag:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
