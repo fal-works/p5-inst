@@ -24,6 +24,10 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "files.insertFinalNewline": true
+  },
   "[markdown]": {
     "editor.wordWrap": "on",
     "editor.quickSuggestions": false,
