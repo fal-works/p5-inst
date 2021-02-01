@@ -4,7 +4,7 @@ const prepare = async () => {
   const pkg = await packageinfo;
 
   const banner = `/**
- * p5-inst -- Thin wrapper around p5.js instance mode.
+ * p5-inst -- Tiny utility for p5.js instance mode.
  * @version ${pkg.version}
  * @license ${pkg.license}
  */`;
