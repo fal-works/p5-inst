@@ -37,32 +37,3 @@ export type P5WritableMethods = {
   deviceTurned: () => void;
   deviceShaken: () => void;
 };
-
-/** Names of `p5` methods that may be overwritten in `new p5()`. */
-export const p5WritableMethodNames: (keyof P5WritableMethods)[] = [
-  "preload",
-  "setup",
-  "draw",
-
-  "windowResized",
-
-  "keyPressed",
-  "keyReleased",
-  "keyTyped",
-
-  "mouseMoved",
-  "mouseDragged",
-  "mousePressed",
-  "mouseReleased",
-  "mouseClicked",
-  "doubleClicked",
-  "mouseWheel",
-
-  "touchStarted",
-  "touchMoved",
-  "touchEnded",
-
-  "deviceMoved",
-  "deviceTurned",
-  "deviceShaken",
-];

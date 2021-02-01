@@ -1,6 +1,5 @@
 import type p5 from "p5";
 import type { P5WritableMethods } from "./p5-methods";
-import { p5WritableMethodNames } from "./p5-methods";
 
 /**
  * Function object to be passed to `new p5()`.
@@ -23,12 +22,4 @@ export type SketchDef = {
     p: p5,
     ...args: Parameters<P5WritableMethods[T]>
   ) => ReturnType<P5WritableMethods[T]>;
-};
-
-/** Creates a function object to be passed to `new p5()`. */
-export const createSketch = (definition: SketchDef): Sketch => (p) => {
-  p5WritableMethodNames.forEach((methodName) => {
-    const method = definition[methodName];
-    if (method) p[methodName] = method.bind(undefined, p);
-  });
 };
