@@ -5,10 +5,8 @@ export type { SketchDef, Sketch };
 type Obj = Record<string, unknown>;
 
 /** Creates a function object to be passed to `new p5()`. */
-export const createSketch = (definition: SketchDef): Sketch => (p) => {
-  Object.keys(definition).forEach((methodName) => {
-    const method = (definition as Obj)[methodName];
-    if (typeof method === "function")
-      (p as Obj)[methodName] = method.bind(undefined, p);
+export const createSketch = (def: SketchDef): Sketch => (p) =>
+  Object.keys(def).forEach((key) => {
+    const func = (def as Obj)[key];
+    if (typeof func === "function") (p as Obj)[key] = func.bind(undefined, p);
   });
-};

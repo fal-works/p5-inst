@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import esbuild from "esbuild";
-import * as terser from "terser";
+import prettier from "prettier";
 import config from "./bundle-config.js";
 
 const run = async () => {
@@ -29,19 +29,21 @@ const run = async () => {
     const esm = await esbuild.build({
       ...baseOptions,
       format: "esm",
+      minifyWhitespace: true,
       write: false,
     });
     const esmCode = esm.outputFiles[0];
     if (!esmCode) throw new Error("Failed to build esm.");
-    const esmMin = await terser.minify(esmCode.text, { ecma: 2015 });
-    const esmCodeMin = esmMin.code;
-    if (!esmCodeMin) throw new Error("Failed to minify esm.");
-    return fs.promises.writeFile(files.dist.esm, esmCodeMin);
+
+    const formatted = prettier.format(esmCode.text, {
+      filepath: files.dist.esm,
+    });
+
+    return fs.promises.writeFile(files.dist.esm, formatted);
   })();
 
   // all
   await Promise.all([iife, esm]);
-  console.log("completed.");
 };
 
 export default run();
