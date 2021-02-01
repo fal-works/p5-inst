@@ -14,7 +14,7 @@ const prepare = async () => {
   const files = {
     srcEntry: "src/index.ts",
     dist: {
-      iife: pkg.main,
+      iife: "lib/p5-inst.js",
       esm: pkg.module,
     },
   };

@@ -1,7 +1,7 @@
 {
   "name": "@fal-works/p5-inst",
   "description": "Tiny utility for p5.js instance mode.",
-  "version": "0.1.0",
+  "version": "0.1.1-alpha",
   "license": "CC0-1.0",
   "author": "FAL",
   "keywords": [
@@ -12,7 +12,7 @@
     "src",
     "types"
   ],
-  "main": "lib/p5-inst.js",
+  "main": "lib/p5-inst-esm.js",
   "module": "lib/p5-inst-esm.js",
   "types": "types/index.d.ts",
   "directories": {
