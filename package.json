@@ -31,14 +31,13 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-total-functions": "^4.7.2",
     "prettier": "^2.2.1",
-    "rimraf": "^3.0.2",
     "ts-sofort": "^0.4.1",
     "typescript": "^4.1.3"
   },
   "scripts": {
+    "prebuild": "ts-sofort scripts/clean.ts",
     "build": "npm run build:lib & npm run build:types",
     "build:lib": "ts-sofort scripts/build.ts",
-    "prebuild:types": "rimraf types",
     "build:types": "tsc --build src/tsconfig.json",
     "postbuild:types": "prettier --write types/**/*.d.ts",
     "lint": "eslint src/"
