@@ -56,6 +56,9 @@ const config = {
     {
       files: patterns.lintedAll,
       extends: ["eslint:recommended", "prettier"],
+      rules: {
+        eqeqeq: "error",
+      },
     },
 
     // basic rules for *.ts
