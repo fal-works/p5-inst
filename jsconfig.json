@@ -1,0 +1,8 @@
+{
+  "include": [".eslintrc.js"],
+  "extends": "./tsconfig.base.json",
+
+  "compilerOptions": {
+    "checkJs": true
+  }
+}
