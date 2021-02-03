@@ -1,7 +1,7 @@
 {
   "name": "@fal-works/p5-inst",
   "description": "Tiny utility for p5.js instance mode.",
-  "version": "0.1.1-alpha",
+  "version": "0.2.0",
   "license": "CC0-1.0",
   "author": "FAL",
   "keywords": [

@@ -13,7 +13,7 @@ Something like this in the `<head>` tag:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fal-works/p5-inst@0.1.0/lib/p5-inst.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fal-works/p5-inst@0.2.0/lib/p5-inst.js"></script>
 
 <script src="path/to/your/sketch.js"></script>
 ```
