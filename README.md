@@ -18,10 +18,10 @@ Something like this in the `<head>` tag:
 <script src="path/to/your/sketch.js"></script>
 ```
 
-Now in your source code you can use a global variable `p5i`, which is defined by `p5-inst.js`.
+Now in your source code you can use a global variable `p5Inst`, which is defined by `p5-inst.js`.
 
 ```js
-const { createSketch } = p5i;
+const { createSketch } = p5Inst;
 ```
 
 ### As ES Module

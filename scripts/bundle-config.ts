@@ -9,7 +9,7 @@ const prepare = async () => {
  * @license ${pkg.license}
  */`;
 
-  const iifeName = "p5i";
+  const iifeName = "p5Inst";
 
   const files = {
     srcEntry: "src/index.ts",
